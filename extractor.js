@@ -8,8 +8,9 @@
  * ToDo: Feature End Date * plus weekends
  * ToDo: VendorURL Pretty
  * ToDo: expirationDate
+ *
  * ToDo: look at Vendor Drop Down
- * ToDo: Nice Fades for highlights, and they remove onClick
+ * ToDo: Nice Fades for highlights
  * ToDo: Deal Vendor Location multi Location?
  * ToDo: Change if loop for location to a switch Statement
 * */
