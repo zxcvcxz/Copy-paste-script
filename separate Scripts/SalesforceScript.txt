@@ -25,15 +25,18 @@ sfData["rawExpirationDate"]=document.getElementById('00N800000033zV8_ileinner').
 /* Value configuration */
 
 /* Price Shaping */
-sfData['unitValue']=sfData['unitValue'].slice(sfData.unitValue.indexOf('$')+1,sfData.unitValue.indexOf('.'));
-sfData['unitSellPrice']=sfData['unitSellPrice'].slice(sfData.unitSellPrice.indexOf('$')+1);
+sfData['unitValue']=Math.round(sfData['unitValue'].slice(sfData.unitValue.indexOf('$')+1));
+sfData['unitSellPrice']=Math.round(sfData['unitSellPrice'].slice(sfData.unitSellPrice.indexOf('$')+1));
 sfData['unitBuyPrice']=sfData['unitBuyPrice'].slice(sfData.unitBuyPrice.indexOf('$')+1);
 
-/* Multi-Line Shaping pt1*/
+/* Multi-Line field parsing */
 sfData['redemptionAddress']=sfData['redemptionAddress'].replace(/<br>/g, "\\n");
 sfData['billingAddress']=sfData['billingAddress'].replace(/<br>/g, "\\n");
 sfData['conditions']=sfData['conditions'].replace(/<br>/g, "\\n");
 sfData['instructions']=sfData['instructions'].replace(/<br>/g, "\\n");
+
+/* Launch date duplication */
+if (sfData["featureEndDate"].indexOf('/') == -1) sfData["featureEndDate"]=sfData["featureDate"];
 
 /* Should be a switch */
 if (sfData['division']=="Albuquerque") {

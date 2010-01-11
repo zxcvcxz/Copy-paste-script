@@ -1,36 +1,34 @@
 javascript:
-var attributesForInsertion = {};
-attributesForInsertion['division'] = "4";
-attributesForInsertion['sfOpportunityId'] = "0068000000RYyGq";
-attributesForInsertion['feature'] = "Feature";
-attributesForInsertion['featureDate'] = "2/1/2010";
-attributesForInsertion['featureEndDate'] = " ";
-attributesForInsertion['vendorName'] = "National Museum of Crime and Punishment";
-attributesForInsertion['redemptionAddress'] = "575 7th St NW \nWashington DC 20004";
-attributesForInsertion['billingAddress'] = "575 7th St NW \nWashington DC 20004";
-attributesForInsertion['unitSellPrice'] = "10";
-attributesForInsertion['unitValue'] = "20";
-attributesForInsertion['unitBuyPrice'] = "6.00";
-attributesForInsertion['dealMin'] = "50";
-attributesForInsertion['dealMax'] = " ";
-attributesForInsertion['buyerMax'] = " ";
-attributesForInsertion['vendorURL'] = "www.crimemuseum.org";
-attributesForInsertion['emailListTo'] = "janine@crimemuseum.org";
-attributesForInsertion['dealTitle'] = "National Museum of Crime and Punishment-$10 voucher for Admission RUN IN FEB";
-attributesForInsertion['conditions'] = "* Expires 05/21/2010 \n * Not valid with any other offers \n * Must exchange for ticket at museum \nExcludes holiday weekends \n-Check website for hours of operation";
-attributesForInsertion['instructions'] = "1. Print Groupon \n2. Check Museum hours http://www.crimemuseum.org/purchase_online.html \n3. Advance tickets recommended-must go to museum to trade in Groupon for Tickets \n3. Enjoy";
-attributesForInsertion['rawExpirationDate'] = "May 21 2010";
+
 /* Insert ATTRIBUTESFORINSERTION here */
+var attributesForInsertion = {};
+attributesForInsertion['division'] = "21";
+attributesForInsertion['sfOpportunityId'] = "0068000000SBVkA";
+attributesForInsertion['feature'] = "Feature";
+attributesForInsertion['featureDate'] = "1/18/2010";
+attributesForInsertion['featureEndDate'] = " ";
+attributesForInsertion['vendorName'] = "Mpls Women's Expo";
+attributesForInsertion['redemptionAddress'] = "Minneapolis Convention Center, Hall D\n1301 South 2nd Ave. Minneapolis, MN";
+attributesForInsertion['billingAddress'] = "Attn. Blaine Kunz \n4424 Oak Chase Rd, Egan, MN 55123";
+attributesForInsertion['unitSellPrice'] = "7";
+attributesForInsertion['unitValue'] = "15";
+attributesForInsertion['unitBuyPrice'] = "3.75";
+attributesForInsertion['dealMin'] = "20";
+attributesForInsertion['dealMax'] = " ";
+attributesForInsertion['buyerMax'] = "1";
+attributesForInsertion['vendorURL'] = "http://www.mplswomensexpo.com/mpls/";
+attributesForInsertion['emailListTo'] = "emilyatwe@yahoo.com";
+attributesForInsertion['dealTitle'] = "Mpls Women's Expo- $7.00 ticket for $15.00";
+attributesForInsertion['conditions'] = "Limit 1 per person. Only good for 1 day of the show. Expires the night of the event. May buy multiple tickets as gifts.";
+attributesForInsertion['instructions'] = "1. Print Groupon \n2. Bring it to the event on either 1/29, 1/30, or 1/31 \n3. Enjoy!";
+attributesForInsertion['rawExpirationDate'] = "Expires the night of the event";
 
 /* Terms/Edit Page */
 $('campaign_division_id').value=attributesForInsertion['division'];
 $('campaign_opportunity_id').value=attributesForInsertion['sfOpportunityId'];
 if (attributesForInsertion["feature"]=="Feature") $('campaign_top_deal').checked="TRUE";
 var launchDate = new Date(attributesForInsertion['featureDate']);
-if (launchDate.getDay()==5) {
-	$('campaign_deadline_date_3i').style.backgroundColor='pink'; 
-	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Friday Deal!</span>'; }
-var endDate = new Date(attributesForInsertion['featureEndDate']);
+var endDate = new Date(attributesForInsertion['featureEndDate']); 
 $('campaign_schedule_date_1i').value=launchDate.getFullYear();
 $('campaign_schedule_date_2i').value=launchDate.getMonth()+1;
 $('campaign_schedule_date_3i').value=launchDate.getDate();
@@ -46,19 +44,30 @@ $('campaign_campaign_money_pledge_campaign_constraints_min_pledges').value=attri
 $('campaign_campaign_money_pledge_campaign_constraints_max_pledges').value=attributesForInsertion['dealMax'];
 $('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
 $('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
+$$('div.field.campaign_campaign_money_pledge__member_constraints_maximum.text')[0].childNodes[0].innerHTML+="<br /><span style='color:gray''>" + attributesForInsertion['conditions'] + "</span>";
 $('campaign_campaign_money_pledge_member_constraints_suggested').value=1;
 $('campaign_deal_vendor_name').value=attributesForInsertion['vendorName'];
-$('campaign_deal_vendor_website_label').value=attributesForInsertion['vendorURL'];
+var anchorText = attributesForInsertion['vendorURL'];
+if (anchorText.indexOf('http://') != -1) anchorText=anchorText.slice(7);
+if (anchorText.charAt(anchorText.length - 1)=="/") anchorText=anchorText.slice(0,anchorText.length-1);
+$('campaign_deal_vendor_website_label').value=anchorText;
 $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
 $('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
 
-
-/* color fields which need Attention */
+/* color fields which need attention */
 $('campaign_campaign_money_pledge_remit_to').style.color="black";
 $('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').style.color="black";
-
+if (launchDate.getDay()==5) {
+	$('campaign_deadline_date_3i').style.backgroundColor='pink'; 
+	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Friday Deal!</span>'; };
+if (launchDate.getDay()==6) {
+	$('campaign_deadline_date_3i').style.backgroundColor='pink'; 
+	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Saturday Deal!</span>'; };
+if (attributesForInsertion['division']==4 || attributesForInsertion['division']==6 ) {
+	$('campaign_division_id').style.backgroundColor='pink';};
 $$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
 $$('div.field.campaign_requires_shipping_address.check')[0].onmouseover = function() { this.style.backgroundColor ="white";};
+$('campaign_deadline_date_3i').onchange = function() { this.style.backgroundColor ="white";};
 $('campaign_release_date_1i').style.backgroundColor='pink';
 $('campaign_release_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_release_date_2i').style.backgroundColor='pink';
