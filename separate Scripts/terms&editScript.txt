@@ -1,9 +1,27 @@
 javascript: 
 
-/* Paste ATTRIBUTESFORINSERTION aqui */
-
+var attributesForInsertion = {};
+attributesForInsertion['division'] = "7";
+attributesForInsertion['sfOpportunityId'] = "0068000000T7xb3";
+attributesForInsertion['feature'] = "Feature";
+attributesForInsertion['FeatureDate'] = "1/11/2010";
+attributesForInsertion['FeatureEndDate'] = " ";
+attributesForInsertion['vendorName'] = "HoneyBaked Ham";
+attributesForInsertion['redemptionAddress'] = "23 HoneyBaked Store locations (See attachment - let me know if there are any questions)";
+attributesForInsertion['billingAddress'] = "5445 Triangle Parkway \nSuite 400 \nNorcross, GA 30092";
+attributesForInsertion['unitSellPrice'] = "12";
+attributesForInsertion['unitValue'] = "25";
+attributesForInsertion['unitBuyPrice'] = "6.00";
+attributesForInsertion['dealMin'] = "200";
+attributesForInsertion['dealMax'] = "750";
+attributesForInsertion['buyerMax'] = "1";
+attributesForInsertion['vendorURL'] = "http://www.honeybakedham.com";
+attributesForInsertion['emailListTo'] = "rbayless@hbham.com";
+attributesForInsertion['dealTitle'] = "HoneyBaked Ham - $12 for Turkey ($24.95 Value)";
+attributesForInsertion['conditions'] = "- Valid only at participating locations. \n- New Whole Roasted Turkey Breast while supplies last and only through January. \n- For your convenience, we recommend you calling ahead to reserve your order. \n- You must present your Groupon certificate at time of purchase to receive the special price. \n- May not be combined with other offers.";
+attributesForInsertion['instructions'] = "1. Print your Groupon \n2. Find your nearest participating store \n3. Call your desired location to reserve your order \n4. Present your Groupon at time of purchase.";
+attributesForInsertion['rawExpirationDate'] = "March 31, 2010";
 /* Terms/Edit Page */
-
 $('campaign_division_id').value=attributesForInsertion['division'];
 $('campaign_opportunity_id').value=attributesForInsertion['sfOpportunityId'];
 if (attributesForInsertion["feature"]=="Feature") $('campaign_top_deal').checked="TRUE";
@@ -14,8 +32,8 @@ var endDate = new Date(attributesForInsertion['featureEndDate']);
 /* $('campaign_schedule_date_1i')
 $('campaign_schedule_date_2i') */
 $('campaign_schedule_date_3i').value=launchDate.getDay();
-/* $('campaign_deadline_date_1i')
-$('campaign_deadline_date_2i') */
+$('campaign_deadline_date_1i')
+$('campaign_deadline_date_2i')
 $('campaign_deadline_date_3i').value=endDate.getDay();
 $('campaign_release_date_1i').style.backgroundColor='pink';
 $('campaign_release_date_2i').style.backgroundColor='pink';
@@ -38,7 +56,8 @@ $('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
 $('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
 $('campaign_campaign_money_pledge_member_constraints_suggested').value=1;
 $('campaign_deal_vendor_name').value=attributesForInsertion['vendorName'];
-$('campaign_deal_vendor_location').value=attributesForInsertion['redemptionAddress'];
+/* $('campaign_deal_vendor_location').value=attributesForInsertion['redemptionAddress']; */
 $('campaign_deal_vendor_website_label').value=attributesForInsertion['vendorURL'];
 $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
-$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value); return null;
+/*$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value); */
+
