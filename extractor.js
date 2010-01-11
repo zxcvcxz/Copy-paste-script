@@ -3,6 +3,7 @@
  * ==================*/
 
 /* ToDo-s
+ * ToDo: Addresses
  * ToDo: Buyer Max Checking
  * ToDo: DC subareas, calif subareas
  * ToDo: Feature End Date * plus weekends
@@ -247,10 +248,10 @@ $('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
 $('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
 $('campaign_campaign_money_pledge_member_constraints_suggested').value=1;
 $('campaign_deal_vendor_name').value=attributesForInsertion['vendorName'];
-$('campaign_deal_vendor_location').value=attributesForInsertion['redemptionAddress'];
+/* $('campaign_deal_vendor_location').value=attributesForInsertion['redemptionAddress']; */
 $('campaign_deal_vendor_website_label').value=attributesForInsertion['vendorURL'];
 $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
-$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value);
+/*$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value); */
 /* Coupon Page */
 /* color fields which need attention */
 $('coupon_title').style.backgroundColor='pink';
