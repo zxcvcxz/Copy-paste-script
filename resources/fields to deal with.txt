@@ -1,0 +1,61 @@
+Division
+Salesforce Opportunity ID
+
+Featured Deal
+
+[Requires Shipping Address]					~~~~Pink
+
+Launch Date {Year Month Day}      <<weekend>>
+Close Date {Year Month Day}
+[Voucher Release Date {Year Month Day Hour}]
+
+Deal Title
+
+Vendor
+
+Local  										~~~~~Pink
+
+Remittance Address
+
+Unit Name *groupons*
+
+Unit Price <unit sell price>
+
+Unit Value
+
+Unit Buy Price <xx.xx>
+
+Deal Min
+
+Deal Max
+
+Buyer Min [1]								~~~~~Pink	
+
+Buyer Max
+
+Suggested [1]
+
+Deal Vendor Name
+
+Deal Vendor Location [online?]
+
+Deal website link text
+
+deal website URL
+
+Deal map URL
+
+
+~~~~~~~~~~~~~~~~Coupon Template
+
+Title
+
+Subtitle
+
+Conditions
+
+Instructions
+
+Map
+
+Expy

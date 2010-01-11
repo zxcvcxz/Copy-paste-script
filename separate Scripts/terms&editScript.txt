@@ -1,0 +1,44 @@
+javascript: 
+
+/* Paste ATTRIBUTESFORINSERTION aqui */
+
+/* Terms/Edit Page */
+
+$('campaign_division_id').value=attributesForInsertion['division'];
+$('campaign_opportunity_id').value=attributesForInsertion['sfOpportunityId'];
+if (attributesForInsertion["feature"]=="Feature") $('campaign_top_deal').checked="TRUE";
+/* color fields which need Attention */
+$$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
+var launchDate = new Date(attributesForInsertion['featureDate']);
+var endDate = new Date(attributesForInsertion['featureEndDate']);
+/* $('campaign_schedule_date_1i')
+$('campaign_schedule_date_2i') */
+$('campaign_schedule_date_3i').value=launchDate.getDay();
+/* $('campaign_deadline_date_1i')
+$('campaign_deadline_date_2i') */
+$('campaign_deadline_date_3i').value=endDate.getDay();
+$('campaign_release_date_1i').style.backgroundColor='pink';
+$('campaign_release_date_2i').style.backgroundColor='pink';
+$('campaign_release_date_3i').style.backgroundColor='pink';
+$('campaign_release_date_3i').style.backgroundColor='pink';
+$('date_hour').style.backgroundColor='pink';
+$('campaign_vendor_id').style.backgroundColor='pink';
+$$('div.field.campaign_local.check')[0].style.backgroundColor='pink';
+$('map_test_link').style.backgroundColor="pink";
+/* end color */
+$('campaign_title').value=attributesForInsertion['vendorName'];
+$('campaign_campaign_money_pledge_remit_to').value=attributesForInsertion['billingAddress'];
+$('campaign_campaign_money_pledge_remit_to').style.color="black";
+$('campaign_campaign_money_pledge_campaign_constraints_unit_price').value=attributesForInsertion['unitSellPrice'];
+$('campaign_campaign_money_pledge_campaign_constraints_unit_value').value=attributesForInsertion['unitValue'];
+$('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').value=attributesForInsertion['unitBuyPrice'];
+$('campaign_campaign_money_pledge_campaign_constraints_min_pledges').value=attributesForInsertion['dealMin'];
+$('campaign_campaign_money_pledge_campaign_constraints_max_pledges').value=attributesForInsertion['dealMax'];
+$('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
+$('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
+$('campaign_campaign_money_pledge_member_constraints_suggested').value=1;
+$('campaign_deal_vendor_name').value=attributesForInsertion['vendorName'];
+$('campaign_deal_vendor_location').value=attributesForInsertion['redemptionAddress'];
+$('campaign_deal_vendor_website_label').value=attributesForInsertion['vendorURL'];
+$('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
+$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value); return null;

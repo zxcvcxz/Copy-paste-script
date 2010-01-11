@@ -1,0 +1,74 @@
+To Grab from SF
+
+document.getElementById('').innerHTML
+
+* Division=00N800000033J4U_ileinner
+* SF Opportunity ID=00N80000004KNJg_ileinner
+^* Feature or Side=opp5_ileinner
+^* Launch Date=00N8000000364aj_ileinner
+^* End date=00N800000040dNR_ileinner  [nbsp for none]
+* Vendor Name=opp4_ileinner
+^* redemption address=00N80000003LdTB_ileinner
+^* billing/remittance Address=00N80000003LriJ_ileinner
+
+^$* Unit [sell] price = 00N80000002Xktz_ileinner
+^$* Unit Value = 00N80000002Xkur_ileinner
+^$* xx.xx Unit Buy Price= 00N80000002XktR_ileinner
+
+* Deal Min=00N80000002XktQ_ileinner
+* Deal Max=00N80000002Xkty_ileinner
+* Buyer Max=00N80000003j6sZ_ileinner
+
+^^* Website=00N80000003YC5j_ileinner -s
+* Email address=00N80000003Lrwt_ileinner
+ 
+
+* Deal Title= document.title with some mangling || h2 class pageDescription || opp3_ileinner
+* Conditions=00N80000002XjZV_ileinner
+* Instructions=00N800000033zfJ_ileinner
+* Expiry=00N800000033zV8_ileinner
+
+~~~~~Groupon Terms Page
+Campaign Selector = campaign_division_id
+salesforce ID field = campaign_opportunity_id
+Feature/sidedeal = campaign_top_deal
+req's shipping address = campaign_requires_shipping_address
+launch Date Year = campaign_schedule_date_1i
+launch Date Month = campaign_schedule_date_2i
+launch Date Day = campaign_schedule_date_3i
+End Date Year = campaign_deadline_date_1i
+End Date Month = campaign_deadline_date_2i
+End Date Day = campaign_deadline_date_3i
+Release Date Year = campaign_release_date_1i
+Release Date Month = campaign_release_date_2i
+Release Date Day = campaign_release_date_3i
+Deal Title = campaign_title
+Vendor Dropdown = campaign_vendor_id
+Local Ticbox = campaign_local
+Remittance Address Textarea = campaign_campaign_money_pledge_remit_to
+Unit Name =campaign_campaign_money_pledge_campaign_constraints_unit_description
+Unit [sell] Price = campaign_campaign_money_pledge_campaign_constraints_unit_price
+Unit Value = campaign_campaign_money_pledge_campaign_constraints_unit_value
+Unit Buy Price = campaign_campaign_money_pledge_campaign_constraints_unit_buy_price
+Deal Min = campaign_campaign_money_pledge_campaign_constraints_min_pledges
+Deal Max = campaign_campaign_money_pledge_campaign_constraints_max_pledges
+Buyer Min = campaign_campaign_money_pledge_member_constraints_minimum
+Buyer Max = campaign_campaign_money_pledge_member_constraints_maximum
+Buyer Suggestion = campaign_campaign_money_pledge_member_constraints_suggested
+Deal Vendor Name = campaign_deal_vendor_name
+Deal Vendor Location = campaign_deal_vendor_location
+Pretty Website = campaign_deal_vendor_website_label
+Real Website = campaign_deal_vendor_website_url
+Vendor Map URL= campaign_deal_vendor_map_url
+onclick="$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value);; return false;"
+
+~~~~~~~Coupon Page
+Title = coupon_title
+Subtitle = coupon_subtitle
+Conditions = coupon_condition_data
+Instructions = coupon_instructions
+Expires Year = coupon_expires_date_1i
+Expires Month = coupon_expires_date_2i
+Expires Day = coupon_expires_date_3i
+
+Coupon <div> = field coupon_map
