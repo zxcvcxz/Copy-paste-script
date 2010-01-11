@@ -1,27 +1,6 @@
 javascript:
 
 /* Insert ATTRIBUTESFORINSERTION here */
-var attributesForInsertion = {};
-attributesForInsertion['division'] = "21";
-attributesForInsertion['sfOpportunityId'] = "0068000000SBVkA";
-attributesForInsertion['feature'] = "Feature";
-attributesForInsertion['featureDate'] = "1/18/2010";
-attributesForInsertion['featureEndDate'] = " ";
-attributesForInsertion['vendorName'] = "Mpls Women's Expo";
-attributesForInsertion['redemptionAddress'] = "Minneapolis Convention Center, Hall D\n1301 South 2nd Ave. Minneapolis, MN";
-attributesForInsertion['billingAddress'] = "Attn. Blaine Kunz \n4424 Oak Chase Rd, Egan, MN 55123";
-attributesForInsertion['unitSellPrice'] = "7";
-attributesForInsertion['unitValue'] = "15";
-attributesForInsertion['unitBuyPrice'] = "3.75";
-attributesForInsertion['dealMin'] = "20";
-attributesForInsertion['dealMax'] = " ";
-attributesForInsertion['buyerMax'] = "1";
-attributesForInsertion['vendorURL'] = "http://www.mplswomensexpo.com/mpls/";
-attributesForInsertion['emailListTo'] = "emilyatwe@yahoo.com";
-attributesForInsertion['dealTitle'] = "Mpls Women's Expo- $7.00 ticket for $15.00";
-attributesForInsertion['conditions'] = "Limit 1 per person. Only good for 1 day of the show. Expires the night of the event. May buy multiple tickets as gifts.";
-attributesForInsertion['instructions'] = "1. Print Groupon \n2. Bring it to the event on either 1/29, 1/30, or 1/31 \n3. Enjoy!";
-attributesForInsertion['rawExpirationDate'] = "Expires the night of the event";
 
 /* Terms/Edit Page */
 $('campaign_division_id').value=attributesForInsertion['division'];
