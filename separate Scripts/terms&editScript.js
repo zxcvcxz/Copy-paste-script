@@ -21,7 +21,8 @@ $('campaign_campaign_money_pledge_campaign_constraints_unit_price').value=attrib
 $('campaign_campaign_money_pledge_campaign_constraints_unit_value').value=attributesForInsertion['unitValue'];
 $('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').value=attributesForInsertion['unitBuyPrice'];
 $('campaign_campaign_money_pledge_campaign_constraints_min_pledges').value=attributesForInsertion['dealMin'];
-$('campaign_campaign_money_pledge_campaign_constraints_max_pledges').value=attributesForInsertion['dealMax'];
+if (isNaN(attributesForInsertion['dealMax']) != true) {
+	$('campaign_campaign_money_pledge_campaign_constraints_max_pledges').value=attributesForInsertion['dealMax']; };
 $('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
 $('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
 $$('div.field.campaign_campaign_money_pledge__member_constraints_maximum.text')[0].childNodes[0].innerHTML+="<br /><span style='color:gray''>" + attributesForInsertion['conditions'] + "</span>";
