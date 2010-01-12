@@ -1,5 +1,3 @@
-
-
 javascript: var sfData = {};
 sfData["division"]=document.getElementById('00N800000033J4U_ileinner').innerHTML;
 sfData["subdivision"]=document.getElementById('00N80000003mJg1_ileinner').innerHTML;
