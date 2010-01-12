@@ -2,31 +2,32 @@ To Grab from SF
 
 document.getElementById('').innerHTML
 
-* Division=00N800000033J4U_ileinner
-* SF Opportunity ID=00N80000004KNJg_ileinner
-^* Feature or Side=opp5_ileinner
-^* Launch Date=00N8000000364aj_ileinner
-^* End date=00N800000040dNR_ileinner  [nbsp for none]
-* Vendor Name=opp4_ileinner
-^* redemption address=00N80000003LdTB_ileinner
-^* billing/remittance Address=00N80000003LriJ_ileinner
+Division=00N800000033J4U_ileinner
+Subdivision=$('00N80000003mJg1_ileinner').innerHTML
+SF Opportunity ID=00N80000004KNJg_ileinner
+Feature or Side=opp5_ileinner
+Launch Date=00N8000000364aj_ileinner
+End date=00N800000040dNR_ileinner  [nbsp for none]
+Vendor Name=opp4_ileinner
+redemption address=00N80000003LdTB_ileinner
+billing/remittance Address=00N80000003LriJ_ileinner
 
-^$* Unit [sell] price = 00N80000002Xktz_ileinner
-^$* Unit Value = 00N80000002Xkur_ileinner
-^$* xx.xx Unit Buy Price= 00N80000002XktR_ileinner
+Unit [sell] price = 00N80000002Xktz_ileinner
+Unit Value = 00N80000002Xkur_ileinner
+Unit Buy Price= 00N80000002XktR_ileinner
 
-* Deal Min=00N80000002XktQ_ileinner
-* Deal Max=00N80000002Xkty_ileinner
-* Buyer Max=00N80000003j6sZ_ileinner
+Deal Min=00N80000002XktQ_ileinner
+Deal Max=00N80000002Xkty_ileinner
+Buyer Max=00N80000003j6sZ_ileinner
 
-^^* Website=00N80000003YC5j_ileinner -s
-* Email address=00N80000003Lrwt_ileinner
+Website=00N80000003YC5j_ileinner -s
+Email address=00N80000003Lrwt_ileinner
  
 
-* Deal Title= document.title with some mangling || h2 class pageDescription || opp3_ileinner
-* Conditions=00N80000002XjZV_ileinner
-* Instructions=00N800000033zfJ_ileinner
-* Expiry=00N800000033zV8_ileinner
+Deal Title= document.title with some mangling || h2 class pageDescription || opp3_ileinner
+Conditions=00N80000002XjZV_ileinner
+Instructions=00N800000033zfJ_ileinner
+Expiry=00N800000033zV8_ileinner
 
 ~~~~~Groupon Terms Page
 Campaign Selector = campaign_division_id
