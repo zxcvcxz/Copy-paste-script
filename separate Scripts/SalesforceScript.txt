@@ -2,6 +2,7 @@
 
 javascript: var sfData = {};
 sfData["division"]=document.getElementById('00N800000033J4U_ileinner').innerHTML;
+sfData["subdivision"]=document.getElementById('00N80000003mJg1_ileinner').innerHTML;
 sfData["sfOpportunityId"]=document.getElementById('00N80000004KNJg_ileinner').innerHTML;
 sfData["feature"]=document.getElementById('opp5_ileinner').innerHTML;
 sfData["featureDate"]=document.getElementById('00N8000000364aj_ileinner').innerHTML;

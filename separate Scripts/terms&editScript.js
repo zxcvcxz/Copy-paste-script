@@ -4,6 +4,7 @@ javascript:
 
 /* Terms/Edit Page */
 $('campaign_division_id').value=attributesForInsertion['division'];
+$$('div.field.campaign_division_id')[0].childNodes[0].innerHTML="Subdivision: " + attributesForInsertion["subdivision"];
 $('campaign_opportunity_id').value=attributesForInsertion['sfOpportunityId'];
 if (attributesForInsertion["feature"]=="Feature") $('campaign_top_deal').checked="TRUE";
 var launchDate = new Date(attributesForInsertion['featureDate']);
@@ -44,8 +45,6 @@ if (launchDate.getDay()==6) {
 	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Saturday Deal!</span>'; };
 if (attributesForInsertion['division']==4 || attributesForInsertion['division']==6 ) {
 	$('campaign_division_id').style.backgroundColor='pink';};
-$$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
-$$('div.field.campaign_requires_shipping_address.check')[0].onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_deadline_date_3i').onchange = function() { this.style.backgroundColor ="white";};
 $('campaign_release_date_1i').style.backgroundColor='pink';
 $('campaign_release_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
@@ -61,8 +60,8 @@ $('campaign_campaign_money_pledge_remit_to').style.backgroundColor="pink";
 $('campaign_campaign_money_pledge_remit_to').onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_campaign_money_pledge_member_constraints_maximum').style.backgroundColor='pink';
 $('campaign_campaign_money_pledge_member_constraints_maximum').setAttribute('onclick', 'this.style.backgroundColor="white"');
-$('map_test_link').style.backgroundColor="pink";
-$('map_test_link').setAttribute('onclick', 'this.style.backgroundColor="white"');
+$('campaign_deal_vendor_website_label').style.backgroundColor='pink';
+$('campaign_deal_vendor_website_label').onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_location_note').style.backgroundColor="pink";
 $('campaign_location_note').setAttribute('onclick', 'this.style.backgroundColor="white"');
 
