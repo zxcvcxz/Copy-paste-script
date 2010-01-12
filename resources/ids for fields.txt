@@ -73,3 +73,11 @@ Expires Month = coupon_expires_date_2i
 Expires Day = coupon_expires_date_3i
 
 Coupon <div> = field coupon_map
+
+~~~~The Point
+BusinessName = $('vendor_name')
+redemptaddre = $('vendor_address')
+contactName  = $('contact_full_name')
+emailAddres  = $('contact_email_address')
+password     = $('contact_password')
+password2    = $('contact_password_confirmation')
