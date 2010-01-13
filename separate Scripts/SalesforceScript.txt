@@ -15,7 +15,8 @@ sfData["dealMin"]=document.getElementById('00N80000002XktQ_ileinner').innerHTML;
 sfData["dealMax"]=document.getElementById('00N80000002Xkty_ileinner').innerHTML;
 sfData["buyerMax"]=document.getElementById('00N80000003j6sZ_ileinner').innerHTML;
 /* This code will return false values if the vendor website isn't first in the list */
-sfData["vendorURL"]=document.getElementById('00N80000003YC5j_ileinner').getElementsByTagName('a')[0].text;
+try { sfData["vendorURL"]=document.getElementById('00N80000003YC5j_ileinner').getElementsByTagName('a')[0].text; }
+catch(typeError) {sfData["vendorURL"]="Url not found in Salesforce";}
 sfData["emailListTo"]=document.getElementById('00N80000003Lrwt_ileinner').childNodes[0].childNodes[0].text;
 sfData["dealTitle"]=document.getElementById('opp3_ileinner').innerHTML;
 sfData["conditions"]=document.getElementById('00N80000002XjZV_ileinner').innerHTML;
@@ -30,9 +31,13 @@ sfData['unitBuyPrice']=sfData['unitBuyPrice'].slice(sfData.unitBuyPrice.indexOf(
 
 /* Multi-Line field parsing */
 sfData['redemptionAddress']=sfData['redemptionAddress'].replace(/<br>/g, "\\n");
+sfData['redemptionAddress']=sfData['redemptionAddress'].replace(/\"/g, "\\\"");
 sfData['billingAddress']=sfData['billingAddress'].replace(/<br>/g, "\\n");
+sfData['billingAddress']=sfData['billingAddress'].replace(/\"/g, "\\\"");
 sfData['conditions']=sfData['conditions'].replace(/<br>/g, "\\n");
+sfData['conditions']=sfData['conditions'].replace(/\"/g, "\\\"");
 sfData['instructions']=sfData['instructions'].replace(/<br>/g, "\\n");
+sfData['instructions']=sfData['instructions'].replace(/\"/g, "\\\"");
 
 /* Launch date duplication */
 if (sfData["featureEndDate"].indexOf('/') == -1) sfData["featureEndDate"]=sfData["featureDate"];
