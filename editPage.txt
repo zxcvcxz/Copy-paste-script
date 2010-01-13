@@ -1,26 +1,5 @@
 javascript:
-var attributesForInsertion = {};
-attributesForInsertion['division'] = "29";
-attributesForInsertion['subdivision'] = " ";
-attributesForInsertion['sfOpportunityId'] = "0068000000SBXaP";
-attributesForInsertion['feature'] = "Side Deal";
-attributesForInsertion['featureDate'] = "1/18/2010";
-attributesForInsertion['featureEndDate'] = "1/21/2010";
-attributesForInsertion['vendorName'] = "Hard Bean Cafe";
-attributesForInsertion['redemptionAddress'] = "801 Main Street\nGrandview, MO 64030";
-attributesForInsertion['billingAddress'] = "801 Main Street\nGrandview, MO 64030";
-attributesForInsertion['unitSellPrice'] = "3";
-attributesForInsertion['unitValue'] = "6";
-attributesForInsertion['unitBuyPrice'] = "1.50";
-attributesForInsertion['dealMin'] = "15";
-attributesForInsertion['dealMax'] = " ";
-attributesForInsertion['buyerMax'] = "5";
-attributesForInsertion['vendorURL'] = "http://www.hardbean.net";
-attributesForInsertion['emailListTo'] = "coffee@hardbean.net";
-attributesForInsertion['dealTitle'] = "SIDE DEAL Hard Bean Cafe-$3 for $6 Worth of Coffee and Food";
-attributesForInsertion['conditions'] = "Limit 5 per person. No cash back. Limit 2 per order.";
-attributesForInsertion['instructions'] = "1. Print Groupon. \n2. Redeem at 810 Main Street in Grandview. \n3. Enjoy!";
-attributesForInsertion['rawExpirationDate'] = "1 year from feature date";
+
 /* Insert ATTRIBUTESFORINSERTION here */
 
 /* Terms/Edit Page */
