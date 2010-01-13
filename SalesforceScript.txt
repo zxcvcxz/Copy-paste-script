@@ -43,150 +43,58 @@ sfData['instructions']=sfData['instructions'].replace(/\"/g, "\\\"");
 if (sfData["featureEndDate"].indexOf('/') == -1) sfData["featureEndDate"]=sfData["featureDate"];
 
 /* Should be a switch */
-if (sfData['division']=="Albuquerque") {
-	sfData['division']=41; 
+
+switch(sfData['division']) {
+	case "Albuquerque": sfData['division']=41; break;
+	case "Atlanta": sfData['division']=7; break;
+	case "Austin": sfData['division']=17; break;
+	case "Baltimore": sfData['division']=25; break;
+	case "Boston": sfData['division']=2; break;
+	case "Charlotte": sfData['division']=23; break;
+	case "Chicago": sfData['division']=1;  break;
+	case "Cincinnati": sfData['division']=38; break;
+	case "Cleveland": sfData['division']=32; break;
+	case "Columbus": sfData['division']=30; break;
+	case "Dallas": sfData['division']=10; break;
+	case "Denver": sfData['division']=12; break;
+	case "Detroit": sfData['division']=42; break;
+	case "Fort Worth": sfData['division']=44; break;
+	case "Fresno": sfData['division']=45; break;
+	case "Houston": sfData['division']=13; break;
+	case "Indianapolis": sfData['division']=26; break;
+	case "Jacksonville": sfData['division']=33; break;
+	case "Kansas City": sfData['division']=29; break;
+	case "Las Vegas": sfData['division']=22; break;
+	case "London": sfData['division']=48; break;
+	case "LA": sfData['division']=48; break;
+	case "Louisville": sfData['division']=37; break;
+	case "Memphis": sfData['division']=34; break;
+	case "Miami": sfData['division']=19; break;
+	case "Milwaukee": sfData['division']=43; break;
+	case "Minneapolis": sfData['division']=21; break;
+	case "Nashville": sfData['division']=24; break;
+	case "New York": sfData['division']=3; break;
+	case "Oklahoma City": sfData['division']=40; break;
+	case "Omaha": sfData['division']=36; break;
+	case "Philadelphia": sfData['division']=16; break;
+	case "Phoenix": sfData['division']=15; break;
+	case "Pittsburgh": sfData['division']=31; break;
+	case "Portland": sfData['division']=20; break;
+	case "Raleigh": sfData['division']=39; break;
+	case "Sacramento": sfData['division']=46; break;
+	case "San Antonio": 	sfData['division']=35; break;
+	case "San Diego": sfData['division']=14; break;
+	case "San Francisco": sfData['division']=5; break;
+	case "San Jose": sfData['division']=28; break;
+	case "Seattle": sfData['division']=11; break;
+	case "St. Louis": sfData['division']=27; break;
+	case "Tampa": sfData['division']=18; break;
+	case "Toronto": sfData['division']=49; break;
+	case "Vancouver": sfData['division']=50; break;
+	case "Virginia Beach": sfData['division']=47; break;
+	case "DC": sfData['division']=4; break;
 }
-else if (sfData['division']=="Atlanta") {
-	sfData['division']=7;
-}
-else if (sfData['division']=="Austin") {
-	sfData['division']=17;
-}
-else if (sfData['division']=="Baltimore") {
-	sfData['division']=25;
-}
-else if (sfData['division']=="Boston") {
-	sfData['division']=2;
-}
-else if (sfData['division']=="Charlotte") {
-	sfData['division']=23;
-}
-else if (sfData['division']=="Chicago") {
-	sfData['division']=1;
-}
-else if (sfData['division']=="Cincinnati") {
-	sfData['division']=38;
-}
-else if (sfData['division']=="Cleveland") {
-	sfData['division']=32;
-}
-else if (sfData['division']=="Columbus") {
-	sfData['division']=30;
-}
-else if (sfData['division']=="Dallas") {
-	sfData['division']=10;
-}
-else if (sfData['division']=="Denver") {
-	sfData['division']=12;
-}
-else if (sfData['division']=="Detroit") {
-	sfData['division']=42;
-}
-else if (sfData['division']=="Fort Worth") {
-	sfData['division']=44;
-}
-else if (sfData['division']=="Fresno") {
-	sfData['division']=45;
-}
-else if (sfData['division']=="Houston") {
-	sfData['division']=13;
-}
-else if (sfData['division']=="Indianapolis") {
-	sfData['division']=26;
-}
-else if (sfData['division']=="Jacksonville") {
-	sfData['division']=33;
-}
-else if (sfData['division']=="Kansas City") {
-	sfData['division']=29;
-}
-else if (sfData['division']=="Las Vegas") {
-	sfData['division']=22;
-}
-else if (sfData['division']=="London") {
-	sfData['division']=48;
-}
-else if (sfData['division']=="LA") {
-	sfData['division']=6;
-}
-else if (sfData['division']=="Louisville") {
-	sfData['division']=37;
-}
-else if (sfData['division']=="Memphis") {
-	sfData['division']=34;
-}
-else if (sfData['division']=="Miami") {
-	sfData['division']=19;
-}
-else if (sfData['division']=="Milwaukee") {
-	sfData['division']=43;
-}
-else if (sfData['division']=="Minneapolis") {
-	sfData['division']=21;
-}
-else if (sfData['division']=="Nashville") {
-	sfData['division']=24;
-}
-else if (sfData['division']=="New York") {
-	sfData['division']=3;
-}
-else if (sfData['division']=="Oklahoma City") {
-	sfData['division']=40;
-}
-else if (sfData['division']=="Omaha") {
-	sfData['division']=36;
-}
-else if (sfData['division']=="Philadelphia") {
-	sfData['division']=16;
-}
-else if (sfData['division']=="Phoenix") {
-	sfData['division']=15;
-}
-else if (sfData['division']=="Pittsburgh") {
-	sfData['division']=31;
-}
-else if (sfData['division']=="Portland") {
-	sfData['division']=20;
-}
-else if (sfData['division']=="Raleigh") {
-	sfData['division']=39;
-}
-else if (sfData['division']=="Sacramento") {
-	sfData['division']=46;
-}
-else if (sfData['division']=="San Antonio") {
-	sfData['division']=35;
-}
-else if (sfData['division']=="San Diego") {
-	sfData['division']=14;
-}
-else if (sfData['division']=="San Francisco") {
-	sfData['division']=5;
-}
-else if (sfData['division']=="San Jose") {
-	sfData['division']=28;
-}
-else if (sfData['division']=="Seattle") {
-	sfData['division']=11;
-}
-else if (sfData['division']=="St. Louis") {
-	sfData['division']=27;
-}
-else if (sfData['division']=="Tampa") {
-	sfData['division']=18;
-}
-else if (sfData['division']=="Toronto") {
-	sfData['division']=49;
-}
-else if (sfData['division']=="Vancouver") {
-	sfData['division']=50;
-}
-else if (sfData['division']=="Virginia Beach") {
-	sfData['division']=47;
-}
-else if (sfData['division']=="DC") {
-	sfData['division']=4;
-}
+
 
 /* write the datastructure to the page for c/p */
 document.write("<p> var attributesForInsertion = {};<br />"); 
