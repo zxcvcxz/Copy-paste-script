@@ -62,6 +62,10 @@ Website Anchor Text = campaign_deal_vendor_website_label
 Real Website = campaign_deal_vendor_website_url
 Vendor Map URL= campaign_deal_vendor_map_url
 onclick="$('campaign_deal_vendor_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_deal_vendor_location').value);; return false;"
+Address line1=campaign_locations_attributes_0_address1
+City = campaign_locations_attributes_0_city
+state = campaign_locations_attributes_0_state
+zipCode = campaign_locations_attributes_0_zip
 
 ~~~~~~~Coupon Page
 Title = coupon_title
