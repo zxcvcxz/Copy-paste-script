@@ -34,10 +34,10 @@ if (anchorText.charAt(anchorText.length - 1)=="/") anchorText=anchorText.slice(0
 $('campaign_deal_vendor_website_label').value=anchorText;
 $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
 $('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
-$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];
-$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];
+if (attributesForInsertion["addressOne"]) {$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];}
+if (attributesForInsertion["city"]) {$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];}
 
-$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];
+if(attributesForInsertion["zip"]) {$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];}
 
 /* color fields which need attention */
 $$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
