@@ -52,14 +52,6 @@ try {
 		sfData["state"]="";
 		sfData["zip"]="";
 		for (i in addresses) if (addresses[i].match(/^[0-9]+[\s\w]+\s\w+/) != null) {sfData["addressOne"]=addresses[i]; break;}
-		sfData["addressOne"]=sfData["addressOne"].replace(/(\sst(\s)?)|(\sSt(\s)?)|(\sst\.(\s)?)/g, " St. ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/(\save(\s)?)|(\sAve(\s)?)|(\save\.(\s)?)/g, " Ave. ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/(\sblvd(\s)?)|(\sBlvd(\s)?)|(\sblvd\.(\s)?)/g, " Blvd. ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/(\sste(\s)?)|(\sSte(\s)?)|(\sste\.(\s)?)/g, " Suite ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/\sN\.\s/g, " N ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/\sS\.\s/g, " S ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/\sE\.\s/g, " E ");
-		sfData["addressOne"]=sfData["addressOne"].replace(/\sW\.\s/g, " W ");
 	
 		for (i in addresses) if ((addresses[i].match(/,/g) != null) && (addresses[i].match(/(\d{5}$)|(\d{5}\-\d{4}$)/) != null)) sfData["addressTwo"]=addresses[i];
 		sfData["city"]=sfData["addressTwo"].slice(2,sfData["addressTwo"].indexOf(","));
