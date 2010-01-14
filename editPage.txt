@@ -36,7 +36,7 @@ $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
 $('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
 $('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];
 $('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];
-$('campaign_locations_attributes_0_state').value=attributesForInsertion["state"];
+
 $('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];
 
 /* color fields which need attention */
