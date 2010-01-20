@@ -59,6 +59,62 @@ try {
 		sfData["zip"]=sfData["addressTwo"].slice(sfData["addressTwo"].indexOf(sfData["addressTwo"].match(/\s[A-Z]{2}\s/g)[0])+4);
 	} } catch (error) {}
 
+
+switch(sfData['state']) {
+	case "AL": sfData["state"]="Alabama"; break;
+	case "AK": sfData["state"]="Alaska"; break;
+	case "AZ": sfData["state"]="Arizona"; break;
+	case "AR": sfData["state"]="Arkansas"; break;
+	case "CA": sfData["state"]="California"; break;
+	case "CO": sfData["state"]="Colorado"; break;
+	case "CT": sfData["state"]="Connecticut"; break;
+	case "DE": sfData["state"]="Delaware"; break;
+	case "FL": sfData["state"]="Florida"; break;
+	case "GA": sfData["state"]="Georgia"; break;
+	case "HI": sfData["state"]="Hawaii"; break;
+	case "ID": sfData["state"]="Idaho"; break;
+	case "IL": sfData["state"]="Illinois"; break;
+	case "IN": sfData["state"]="Indiana"; break;
+	case "IA": sfData["state"]="Iowa"; break;
+	case "KS": sfData["state"]="Kansas"; break;
+	case "KY": sfData["state"]="Kentucky"; break;
+	case "LA": sfData["state"]="Louisiana"; break;
+	case "ME": sfData["state"]="Maine"; break;
+	case "MD": sfData["state"]="Maryland"; break;
+	case "MA": sfData["state"]="Massachusetts"; break;
+	case "MI": sfData["state"]="Michigan"; break;
+	case "MN": sfData["state"]="Minnesota"; break;
+	case "MS": sfData["state"]="Mississippi"; break;
+	case "MO": sfData["state"]="Missouri"; break;
+	case "MT": sfData["state"]="Montana"; break;
+	case "NE": sfData["state"]="Nebraska"; break;
+	case "NV": sfData["state"]="Nevada"; break;
+	case "NH": sfData["state"]="New Hampshire"; break;
+	case "NJ": sfData["state"]="New Jersey"; break;
+	case "NM": sfData["state"]="New Mexico"; break;
+	case "NY": sfData["state"]="New York"; break;
+	case "NC": sfData["state"]="North Carolina"; break;
+	case "ND": sfData["state"]="North Dakota"; break;
+	case "OH": sfData["state"]="Ohio"; break;
+	case "OK": sfData["state"]="Oklahoma"; break;
+	case "OR": sfData["state"]="Oregon"; break;
+	case "PA": sfData["state"]="Pennsylvania"; break;
+	case "PR": sfData["state"]="Puerto Rico"; break;
+	case "RI": sfData["state"]="Rhode Island"; break;
+	case "SC": sfData["state"]="South Carolina"; break;
+	case "SD": sfData["state"]="South Dakota"; break;
+	case "TN": sfData["state"]="Tennessee"; break;
+	case "TX": sfData["state"]="Texas"; break;
+	case "UT": sfData["state"]="Utah"; break;
+	case "VT": sfData["state"]="Vermont"; break;
+	case "VI": sfData["state"]="Virginia"; break;
+	case "WA": sfData["state"]="Washington"; break;
+	case "DC": sfData["state"]="Washington D.C."; break;
+	case "WV": sfData["state"]="West Virginia"; break;
+	case "WI": sfData["state"]="Wisconsin"; break;
+	case "WY": sfData["state"]="Wyoming"; break;
+}
+
 switch(sfData['division']) {
 	case "Albuquerque": sfData['division']=41; break;
 	case "Atlanta": sfData['division']=7; break;
