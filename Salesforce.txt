@@ -44,20 +44,19 @@ if (sfData["featureEndDate"].indexOf('/') == -1) sfData["featureEndDate"]=sfData
 
 /* Parse some addresses for the address page */
 try {
-	if (sfData["redemptionAddress"].indexOf("\n") != -1) {
-		var addresses = sfData["redemptionAddress"].split("\n");
+	if (sfData["redemptionAddress"].match(/\\n/) != null) {
+		var addresses = sfData["redemptionAddress"].split("\\n");
 		sfData["addressOne"]="";
 		sfData["addressTwo"]="";
 		sfData["city"]="";
 		sfData["state"]="";
 		sfData["zip"]="";
-		for (i in addresses) if (addresses[i].match(/^[0-9]+[\s\w]+\s\w+/) != null) {sfData["addressOne"]=addresses[i]; break;}
+		for (i in addresses) if (addresses[i].match(/^[0-9]+[\s\w+]+/) != null) {sfData["addressOne"]=addresses[i]; break;}
 	
 		for (i in addresses) if ((addresses[i].match(/,/g) != null) && (addresses[i].match(/(\d{5}$)|(\d{5}\-\d{4}$)/) != null)) sfData["addressTwo"]=addresses[i];
-		sfData["city"]=sfData["addressTwo"].slice(2,sfData["addressTwo"].indexOf(","));
+		sfData["city"]=sfData["addressTwo"].slice(0,sfData["addressTwo"].indexOf(","));
 		sfData["state"]=sfData["addressTwo"].match(/\s[A-Z]{2}\s/g)[0].replace(/\s/g, "");
 		sfData["zip"]=sfData["addressTwo"].slice(sfData["addressTwo"].indexOf(sfData["addressTwo"].match(/\s[A-Z]{2}\s/g)[0])+4);
-		sfData["addressTwo"]=sfData["addressTwo"].slice(2,sfData["addressTwo"].length-1);
 	} } catch (error) {}
 
 switch(sfData['division']) {
