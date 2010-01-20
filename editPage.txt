@@ -48,13 +48,13 @@ $$('div.field.campaign_local.check')[0].onmouseover = function() { this.style.ba
 $('campaign_campaign_money_pledge_remit_to').style.color="black";
 $('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').style.color="black";
 if (launchDate.getDay()==5) {
-	$('campaign_deadline_date_3i').style.backgroundColor='#ffeeff'; 
+	$('campaign_deadline_date_3i').style.backgroundColor='#ffc0ff'; 
 	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Friday Deal!</span>'; };
 if (launchDate.getDay()==6) {
-	$('campaign_deadline_date_3i').style.backgroundColor='#ffeeff'; 
+	$('campaign_deadline_date_3i').style.backgroundColor='#ffc0ff'; 
 	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Saturday Deal!</span>'; };
 if (attributesForInsertion['division']==4 || attributesForInsertion['division']==6 ) {
-	$('campaign_division_id').style.backgroundColor='#ffeeff';};
+	$('campaign_division_id').style.backgroundColor='#ffc0ff';};
 $('campaign_deadline_date_3i').onchange = function() { this.style.backgroundColor ="white";};
 $('campaign_release_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_release_date_2i').onmouseover = function() { this.style.backgroundColor ="white";};
