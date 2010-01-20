@@ -1,6 +1,6 @@
 javascript:
 
-/* Insert ATTRIBUTESFORINSERTION here */
+/* Paste Attributes for Insertion here */
 
 /* Terms/Edit Page */
 $('campaign_division_id').value=attributesForInsertion['division'];
@@ -36,7 +36,7 @@ $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
 $('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
 if (attributesForInsertion["addressOne"]) {$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];}
 if (attributesForInsertion["city"]) {$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];}
-
+if (attributesForInsertion["state"]) {$('campaign_locations_attributes_0_state').value=attributesForInsertion["state"];}
 if(attributesForInsertion["zip"]) {$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];}
 
 /* color fields which need attention */
