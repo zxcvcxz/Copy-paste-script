@@ -4,8 +4,8 @@ javascript:
 
 if ($('vendor_contact_params_new_permalink').value != "") {
 	$('vendor_name').value=attributesForInsertion["vendorName"];
-	$('vendor_address').value=attributesForInsertion["redemptionAddress"]; }
-	$('contact_full_name').focus();
+	$('vendor_address').value=attributesForInsertion["redemptionAddress"]; 
+	$('contact_full_name').focus(); }
 else {
 	$('contact_full_name').value=attributesForInsertion["vendorName"];
 	$('contact_full_name').style.backgroundColor="pink";
