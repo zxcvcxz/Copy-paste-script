@@ -75,5 +75,6 @@ $('campaign_location_note').style.backgroundColor="pink";
 $('campaign_location_note').setAttribute('onclick', 'this.style.backgroundColor="white"');
 
 /* end color */
+$('campaign_vendor_id').focus();
 
-return null;
+null 0;
