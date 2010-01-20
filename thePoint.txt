@@ -1,6 +1,6 @@
 javascript:
 
-/* Insert ATTRIBUTESFORINSERTION here */
+/* Paste attributesForInsertion Here */
 
 if ($('vendor_contact_params_new_permalink').value != "") {
 	$('vendor_name').value=attributesForInsertion["vendorName"];
