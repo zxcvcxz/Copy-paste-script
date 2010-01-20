@@ -107,7 +107,7 @@ switch(sfData['state']) {
 	case "TX": sfData["state"]="Texas"; break;
 	case "UT": sfData["state"]="Utah"; break;
 	case "VT": sfData["state"]="Vermont"; break;
-	case "VI": sfData["state"]="Virginia"; break;
+	case "VA": sfData["state"]="Virginia"; break;
 	case "WA": sfData["state"]="Washington"; break;
 	case "DC": sfData["state"]="Washington D.C."; break;
 	case "WV": sfData["state"]="West Virginia"; break;
