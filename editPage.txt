@@ -37,7 +37,9 @@ $('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
 if (attributesForInsertion["addressOne"]) {$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];}
 if (attributesForInsertion["city"]) {$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];}
 if (attributesForInsertion["state"]) {$('campaign_locations_attributes_0_state').value=attributesForInsertion["state"];}
-if(attributesForInsertion["zip"]) {$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];}
+if (attributesForInsertion["zip"]) {$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];}
+$('campaign_locations_attributes_0_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_locations_attributes_0_address1').value + " " + $('campaign_locations_attributes_0_city').value + " " + $('campaign_locations_attributes_0_state').value + " " + $('campaign_locations_attributes_0_zip').value);
+
 
 /* color fields which need attention */
 $$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
