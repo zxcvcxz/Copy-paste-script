@@ -4,7 +4,7 @@ javascript:
  
 $('coupon_title').value=attributesForInsertion['dealTitle'];
 $('coupon_condition_data').value=attributesForInsertion['conditions'].split("\n\n")[0];
-var tippingLanguage = "\n|\n*Remember: Groupon customers tip on the full amount of the pre-discounted bill (and tip generously). That's why we are the coolest customers out there.\n\n *Remember: Groupon customers tip on the full amount of the pre-discounted service (and tip generously). That's why we are the coolest customers out there.";
+var tippingLanguage = "\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted bill (and tip generously). That's why we are the coolest customers out there.\n\n *Remember: Groupon customers tip on the full amount of the pre-discounted service (and tip generously). That's why we are the coolest customers out there.";
 $('coupon_instructions').value=attributesForInsertion['instructions'] + tippingLanguage; 
 $$('div.field.coupon_expires')[0].childNodes[0].innerHTML+=" " + attributesForInsertion['rawExpirationDate'] +"; launches on " + attributesForInsertion['featureDate'];
 var launchDate = new Date(attributesForInsertion['featureDate']); 
