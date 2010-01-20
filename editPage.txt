@@ -25,7 +25,7 @@ if (isNaN(attributesForInsertion['dealMax']) != true) {
 	$('campaign_campaign_money_pledge_campaign_constraints_max_pledges').value=attributesForInsertion['dealMax']; };
 $('campaign_campaign_money_pledge_member_constraints_minimum').value=1;
 $('campaign_campaign_money_pledge_member_constraints_maximum').value=attributesForInsertion['buyerMax'];
-$$('div.field.campaign_campaign_money_pledge__member_constraints_maximum.text')[0].childNodes[0].innerHTML+="<br /><span style='color:gray''>Change this field in Salesforce!</span>";
+$$('div.field.campaign_campaign_money_pledge__member_constraints_maximum.text')[0].childNodes[0].innerHTML+="<br /><span style='color:gray''>" +attributesForInsertion['conditions'].split("\n\n")[0] + "</span>";
 $('campaign_campaign_money_pledge_member_constraints_suggested').value=1;
 $('campaign_deal_vendor_name').value=attributesForInsertion['vendorName'];
 var anchorText = attributesForInsertion['vendorURL'];
@@ -42,38 +42,30 @@ $('campaign_locations_attributes_0_map_url').value='http://maps.google.com/maps?
 
 
 /* color fields which need attention */
-$$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='pink';
-$$('div.field.campaign_requires_shipping_address.check')[0].onmouseover = function() { this.style.backgroundColor ="white";};
-$$('div.field.campaign_local.check')[0].style.backgroundColor='pink';
+$$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='#ffeeff';
+$$('div.field.campaign_local.check')[0].style.backgroundColor='#ffc0ff';
 $$('div.field.campaign_local.check')[0].onmouseover = function() { this.style.backgroundColor ="white";};
 $('campaign_campaign_money_pledge_remit_to').style.color="black";
 $('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').style.color="black";
 if (launchDate.getDay()==5) {
-	$('campaign_deadline_date_3i').style.backgroundColor='pink'; 
+	$('campaign_deadline_date_3i').style.backgroundColor='#ffeeff'; 
 	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Friday Deal!</span>'; };
 if (launchDate.getDay()==6) {
-	$('campaign_deadline_date_3i').style.backgroundColor='pink'; 
+	$('campaign_deadline_date_3i').style.backgroundColor='#ffeeff'; 
 	$$('div.launch_date')[0].childNodes[1].innerHTML+=' <span style="color:red">Saturday Deal!</span>'; };
 if (attributesForInsertion['division']==4 || attributesForInsertion['division']==6 ) {
-	$('campaign_division_id').style.backgroundColor='pink';};
+	$('campaign_division_id').style.backgroundColor='#ffeeff';};
 $('campaign_deadline_date_3i').onchange = function() { this.style.backgroundColor ="white";};
-$('campaign_release_date_1i').style.backgroundColor='pink';
 $('campaign_release_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_release_date_2i').style.backgroundColor='pink';
 $('campaign_release_date_2i').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_release_date_3i').style.backgroundColor='pink';
 $('campaign_release_date_3i').onmouseover = function() { this.style.backgroundColor ="white";};
-$('date_hour').style.backgroundColor='pink';
-$('date_hour').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_vendor_id').style.backgroundColor='pink';
-$('campaign_vendor_id').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_campaign_money_pledge_remit_to').style.backgroundColor="pink";
-$('campaign_campaign_money_pledge_remit_to').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_campaign_money_pledge_member_constraints_maximum').style.backgroundColor='pink';
+$('date_hour').style.backgroundColor='#ffeeff';
+$('campaign_vendor_id').style.backgroundColor='#ffc0ff';
+$('campaign_campaign_money_pledge_member_constraints_maximum').style.backgroundColor='#ffc0ff';
 $('campaign_campaign_money_pledge_member_constraints_maximum').setAttribute('onclick', 'this.style.backgroundColor="white"');
-$('campaign_deal_vendor_website_label').style.backgroundColor='pink';
-$('campaign_deal_vendor_website_label').onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_location_note').style.backgroundColor="pink";
+$('campaign_deal_vendor_website_label').style.backgroundColor='#ffc0ff';
+$('campaign_deal_vendor_website_label').setAttribute('onclick', 'this.style.backgroundColor="white"');
+$('campaign_location_note').style.backgroundColor="#ffc0ff";
 $('campaign_location_note').setAttribute('onclick', 'this.style.backgroundColor="white"');
 
 /* end color */
