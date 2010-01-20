@@ -7,6 +7,10 @@ $('coupon_condition_data').value=attributesForInsertion['conditions'];
 var tippingLanguage = "\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted bill (and tip generously). That's why we are the coolest customers out there.\n\n *Remember: Groupon customers tip on the full amount of the pre-discounted service (and tip generously). That's why we are the coolest customers out there.";
 $('coupon_instructions').value=attributesForInsertion['instructions'] + tippingLanguage; 
 $$('div.field.coupon_expires')[0].childNodes[0].innerHTML+=" " + attributesForInsertion['rawExpirationDate'] +"; launches on " + attributesForInsertion['featureDate'];
+var launchDate = new Date(attributesForInsertion['featureDate']); 
+$('coupon_expires_date_1i').value=launchDate.getFullYear();
+$('coupon_expires_date_2i').value=launchDate.getMonth()+1;
+$('coupon_expires_date_3i').value=launchDate.getDate();
  
 /* color fields which need attention */
 $('coupon_title').style.backgroundColor='pink';
@@ -24,7 +28,9 @@ $$('div.field.coupon_map')[0].onmouseover = function() { this.style.backgroundCo
 $('coupon_condition_data').style.backgroundColor='pink';
 $('coupon_condition_data').setAttribute('onclick', 'this.style.backgroundColor="white"');
 $('coupon_instructions').style.backgroundColor='pink'; 
-$('coupon_instructions').setAttribute('onclick', 'this.style.backgroundColor="white"'); return null;
+$('coupon_instructions').setAttribute('onclick', 'this.style.backgroundColor="white"'); 
 /* end coupon page coloring */
+
+void 0;
  
 /* end coupon page */
