@@ -22,6 +22,11 @@ sfData["dealTitle"]=document.getElementById('opp3_ileinner').innerHTML;
 sfData["conditions"]=document.getElementById('00N80000002XjZV_ileinner').innerHTML;
 sfData["instructions"]=document.getElementById('00N800000033zfJ_ileinner').innerHTML;
 sfData["rawExpirationDate"]=document.getElementById('00N800000033zV8_ileinner').innerHTML;
+/* To get the first name of the business contact */
+var theId = document.getElementById('00N80000004KNJg_ileinner').innerHTML+"_RelatedContactRoleList_body";
+sfData["firstName"]="";
+try {sfData["firstName"]=document.getElementById(theId).childNodes[0].childNodes[0].childNodes[4].childNodes[1].childNodes[0].text.split(" ")[0]; }
+catch(typeError) {void 0;}
 /* Value configuration */
 
 /* Price Shaping */
