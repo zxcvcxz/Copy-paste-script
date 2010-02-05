@@ -1,0 +1,9 @@
+The Master script is a concatenation of the three smaller scripts, 
+
+thepoint, editpage, and couponpage
+
+The point works with both thepoint.com/vendors/new and groupon.com/vendors/new
+
+~~~
+
+The salesforce script can be saved as a bookmarklet.  When run on a salesforce deal it creates a data structure for copy/paste into either the master script or the three subscripts.
