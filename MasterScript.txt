@@ -2,26 +2,30 @@ javascript:
  
 /* Paste AttributesForInsertion here */
 
-try{if ($('vendor_contact_params_new_permalink').value != "") {
-	$('vendor_name').value=attributesForInsertion["vendorName"];
-	$('vendor_address').value=attributesForInsertion["redemptionAddress"];  }
-else {
-	$('contact_full_name').value=attributesForInsertion["firstName"]+" "+attributesForInsertion["vendorName"];
-	$('contact_full_name').style.backgroundColor="pink";
-	$('contact_full_name').setAttribute('onclick', 'this.style.backgroundColor="white"');
-	$('contact_email_address').value=attributesForInsertion["emailListTo"];
-	var adjective = Math.round(Math.random()*10);
-	if (adjective >= 5) {adjective = "rocks";} else if (adjective < 5) {adjective = "rules";}
-	var pass1 = attributesForInsertion["vendorName"].replace(/\s*/g,'') + "rocks" + Math.round(Math.random()*10);
-	var pass2 = pass1.toLowerCase();
-	$('contact_password').value=pass2;
-	$('contact_password_confirmation').value=pass2;
-	$('contact_full_name').focus();
-	};} catch(Error){}
+try{
+	/* Start user and vendor creation page */
+	if ($('vendor_contact_params_new_permalink').value != "") {
+		$('vendor_name').value=attributesForInsertion["vendorName"];
+		$('vendor_address').value=attributesForInsertion["redemptionAddress"];  }
+	else {
+		$('contact_full_name').value=attributesForInsertion["firstName"]+" "+attributesForInsertion["vendorName"];
+		$('contact_full_name').style.backgroundColor="pink";
+		$('contact_full_name').setAttribute('onclick', 'this.style.backgroundColor="white"');
+		$('contact_email_address').value=attributesForInsertion["emailListTo"];
+		var adjective = Math.round(Math.random()*10);
+		if (adjective >= 5) {adjective = "rocks";} else if (adjective < 5) {adjective = "rules";}
+		var pass1 = attributesForInsertion["vendorName"].replace(/\s*/g,'') + "rocks" + Math.round(Math.random()*10);
+		var pass2 = pass1.toLowerCase();
+		$('contact_password').value=pass2;
+		$('contact_password_confirmation').value=pass2;
+		$('contact_full_name').focus();
+	};
+	/* End Vendor Creation Page */
+} catch(Error){}
 
 try{
 	/*Start Coupon page */
-	$('coupon_title').value=attributesForInsertion['dealTitle'];
+	$('coupon_pledge_title').value=attributesForInsertion['dealTitle'];
 	$('coupon_condition_data').value=attributesForInsertion['conditions'].split("\n\n")[0];
 	var tippingLanguage = "\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted bill (and tip generously). That's why we are the coolest customers out there.\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted service (and tip generously). That's why we are the coolest customers out there.";
 	$('coupon_instructions').value=attributesForInsertion['instructions'] + tippingLanguage;
@@ -37,10 +41,10 @@ try{
 
 	/* color fields which need attention */
 	$('colorEndDay').style.color="red";
-	$('coupon_title').style.backgroundColor='pink';
-	$('coupon_title').setAttribute('onclick', 'this.style.backgroundColor="white"');
-	$('coupon_subtitle').style.backgroundColor='pink';
-	$('coupon_subtitle').onmouseover = function() { this.style.backgroundColor ="white";};
+	$('coupon_pledge_title').style.backgroundColor='pink';
+	$('coupon_pledge_title').setAttribute('onclick', 'this.style.backgroundColor="white"');
+	$('coupon_pledge_subtitle').style.backgroundColor='pink';
+	$('coupon_pledge_subtitle').onmouseover = function() { this.style.backgroundColor ="white";};
 	$('coupon_expires_date_1i').style.backgroundColor='pink';
 	$('coupon_expires_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
 	$('coupon_expires_date_2i').style.backgroundColor='pink';
@@ -54,7 +58,8 @@ try{
 	$('coupon_instructions').style.backgroundColor='pink'; 
 	$('coupon_instructions').setAttribute('onclick', 'this.style.backgroundColor="white"'); 
 	/* end coupon page coloring */
-	/* end coupon page */} catch(error){}
+	/* end coupon page */
+} catch(error){}
 
 try{
 	/* Terms/Edit Page */
