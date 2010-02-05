@@ -62,6 +62,10 @@ try{
 } catch(error){}
 
 try{
+	javascript:
+
+	/* Paste Attributes for Insertion here */
+
 	/* Terms/Edit Page */
 	$('campaign_division_id').value=attributesForInsertion['division'];
 	$$('div.field.campaign_division_id')[0].childNodes[0].innerHTML="Subdivision: " + attributesForInsertion["subdivision"];
@@ -93,12 +97,14 @@ try{
 	if (anchorText.charAt(anchorText.length - 1)=="/") anchorText=anchorText.slice(0,anchorText.length-1);
 	$('campaign_deal_vendor_website_label').value=anchorText;
 	$('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
-	$('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
+	$$("div.field.campaign_location_note label")[0].innerHTML+= "<br /><br />" + 
+		attributesForInsertion['redemptionAddress'].replace(/\n/g, "<br \/>");;
 	if (attributesForInsertion["addressOne"]) {$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];}
 	if (attributesForInsertion["city"]) {$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];}
 	if (attributesForInsertion["state"]) {$('campaign_locations_attributes_0_state').value=attributesForInsertion["state"];}
 	if (attributesForInsertion["zip"]) {$('campaign_locations_attributes_0_zip').value=attributesForInsertion["zip"];}
 	$('campaign_locations_attributes_0_map_url').value='http://maps.google.com/maps?q='+encodeURI($('campaign_locations_attributes_0_address1').value + " " + $('campaign_locations_attributes_0_city').value + " " + $('campaign_locations_attributes_0_state').value + " " + $('campaign_locations_attributes_0_zip').value);
+
 
 	/* color fields which need attention */
 	$$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='#ffeeff';
@@ -126,12 +132,11 @@ try{
 	$('campaign_deal_vendor_website_url').setAttribute('onclick', 'this.style.backgroundColor="white"');
 	$('campaign_deal_vendor_website_label').style.backgroundColor='#ffeeff';
 	$('campaign_deal_vendor_website_label').setAttribute('onclick', 'this.style.backgroundColor="white"');
-	$('campaign_location_note').style.backgroundColor="#ffc0ff";
-	$('campaign_location_note').setAttribute('onclick', 'this.style.backgroundColor="white"');
 
 	/* end color */
 	$('campaign_vendor_id').focus();
 
+	void 0;
 } catch(Error){}
 
 void 0;

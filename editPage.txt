@@ -33,7 +33,8 @@ if (anchorText.indexOf('http://') != -1) anchorText=anchorText.slice(7);
 if (anchorText.charAt(anchorText.length - 1)=="/") anchorText=anchorText.slice(0,anchorText.length-1);
 $('campaign_deal_vendor_website_label').value=anchorText;
 $('campaign_deal_vendor_website_url').value=attributesForInsertion['vendorURL'];
-$('campaign_location_note').value=attributesForInsertion['redemptionAddress'];
+$$("div.field.campaign_location_note label")[0].innerHTML+= "<br /><br />" + 
+	attributesForInsertion['redemptionAddress'].replace(/\n/g, "<br \/>");;
 if (attributesForInsertion["addressOne"]) {$('campaign_locations_attributes_0_address1').value=attributesForInsertion["addressOne"];}
 if (attributesForInsertion["city"]) {$('campaign_locations_attributes_0_city').value=attributesForInsertion["city"];}
 if (attributesForInsertion["state"]) {$('campaign_locations_attributes_0_state').value=attributesForInsertion["state"];}
@@ -67,8 +68,6 @@ $('campaign_deal_vendor_website_url').style.backgroundColor='#ffc0ff';
 $('campaign_deal_vendor_website_url').setAttribute('onclick', 'this.style.backgroundColor="white"');
 $('campaign_deal_vendor_website_label').style.backgroundColor='#ffeeff';
 $('campaign_deal_vendor_website_label').setAttribute('onclick', 'this.style.backgroundColor="white"');
-$('campaign_location_note').style.backgroundColor="#ffc0ff";
-$('campaign_location_note').setAttribute('onclick', 'this.style.backgroundColor="white"');
 
 /* end color */
 $('campaign_vendor_id').focus();
