@@ -1,9 +1,9 @@
 javascript: 
  
-/* Insert AttributesForInsertion here */
- 
+/* Insert AttributesForInsertion Here */
+
 /*Start Coupon page */
-$('coupon_title').value=attributesForInsertion['dealTitle'];
+$('coupon_pledge_title').value=attributesForInsertion['dealTitle'];
 $('coupon_condition_data').value=attributesForInsertion['conditions'].split("\n\n")[0];
 var tippingLanguage = "\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted bill (and tip generously). That's why we are the coolest customers out there.\n\n*Remember: Groupon customers tip on the full amount of the pre-discounted service (and tip generously). That's why we are the coolest customers out there.";
 $('coupon_instructions').value=attributesForInsertion['instructions'] + tippingLanguage;
@@ -19,10 +19,10 @@ $('coupon_expires_date_3i').value=expDate.getDate();
  
 /* color fields which need attention */
 $('colorEndDay').style.color="red";
-$('coupon_title').style.backgroundColor='pink';
-$('coupon_title').setAttribute('onclick', 'this.style.backgroundColor="white"');
-$('coupon_subtitle').style.backgroundColor='pink';
-$('coupon_subtitle').onmouseover = function() { this.style.backgroundColor ="white";};
+$('coupon_pledge_title').style.backgroundColor='pink';
+$('coupon_pledge_title').setAttribute('onclick', 'this.style.backgroundColor="white"');
+$('coupon_pledge_subtitle').style.backgroundColor='pink';
+$('coupon_pledge_subtitle').onmouseover = function() { this.style.backgroundColor ="white";};
 $('coupon_expires_date_1i').style.backgroundColor='pink';
 $('coupon_expires_date_1i').onmouseover = function() { this.style.backgroundColor ="white";};
 $('coupon_expires_date_2i').style.backgroundColor='pink';
