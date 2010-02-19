@@ -80,7 +80,7 @@ try{
 	$('campaign_deadline_date_2i').value=endDate.getMonth()+1;
 	$('campaign_deadline_date_3i').value=endDate.getDate();
 	$('campaign_title').value=attributesForInsertion['vendorName'];
-	$('campaign_campaign_money_pledge_remit_to').value=attributesForInsertion['billingAddress'];
+	$('campaign_remit_to').value=attributesForInsertion['billingAddress'];
 	$('campaign_campaign_money_pledge_campaign_constraints_unit_price').value=attributesForInsertion['unitSellPrice'];
 	$('campaign_campaign_money_pledge_campaign_constraints_unit_value').value=attributesForInsertion['unitValue'];
 	$('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').value=attributesForInsertion['unitBuyPrice'];
