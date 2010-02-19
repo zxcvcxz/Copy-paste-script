@@ -46,7 +46,7 @@ $('campaign_locations_attributes_0_map_url').value='http://maps.google.com/maps?
 $$('div.field.campaign_requires_shipping_address.check')[0].style.backgroundColor='#ffeeff';
 $$('div.field.campaign_local.check')[0].style.backgroundColor='#ffc0ff';
 $$('div.field.campaign_local.check')[0].onmouseover = function() { this.style.backgroundColor ="white";};
-$('campaign_campaign_money_pledge_remit_to').style.color="black";
+$('campaign_remit_to').style.color="black";
 $('campaign_campaign_money_pledge_campaign_constraints_unit_buy_price').style.color="black";
 if (launchDate.getDay()==5) {
 	$('campaign_deadline_date_3i').style.backgroundColor='#ffc0ff'; 
